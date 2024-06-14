@@ -17,22 +17,22 @@ body {
     padding-top: 30px;
 }
 
-.starwarsImage {
+.star-wars-image {
     height: 200px;
     width: 380px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#searchInput {
+#search-input {
     margin-top: 10px;
     width: 200px;
     height: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-family: 'Courier New', Courier, monospace;
 }
 
-#searchButton {
+#search-button {
     border-radius: 20px;
     height: 30px;
     width: 200px;
@@ -42,29 +42,40 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-#searchButton:hover {
+#search-button:hover {
     cursor: pointer;
 }
 
-#searchButton:active {
+#search-button:active {
     height: 28px;
     width: 190px;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
-.textAbout {
+.text-about {
     margin-top: 40px;
 }
 
-.infoList {
+.result {
     list-style: none;
-    padding: 0;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center; 
+    float: left;
+    margin-top: 30px;
+    width: 500px;
+    background-color: rgb(41, 41, 41);
+    border-radius: 20px;
 }
 
-.infoList li {
+.result li {
     text-align: left;
     width: 100%; 
     max-width: 200px;
+}
+
+.hidden {
+    display: none;
 }
