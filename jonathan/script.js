@@ -30,9 +30,7 @@ async function getInfoFromApi() {
 
     // Make sure that the user has entered a valid search term
     if (!characterSearchInputValue) {
-        errorText.innerText = 'Please enter a valid search term.'
-        errorText.classList.remove('hidden')
-
+        displayError('Please enter a valid search term.')
         return
     }
 
@@ -48,9 +46,7 @@ async function getInfoFromApi() {
         if (!response.ok) {
             console.error('Something went wrong with the API-request:', response.status)
 
-            errorText.innerText = 'Character was not found. Try Again.'
-            errorText.classList.remove('hidden')
-
+            displayError('Character was not found. Try Again.')
             return
         }
 
@@ -62,9 +58,7 @@ async function getInfoFromApi() {
         
         // Make sure that the character was found
         if (data.count === 0 || !data) {
-            errorText.innerText = 'Character was not found. Try Again.'
-            errorText.classList.remove('hidden')
-
+            displayError('Character was not found. Try Again.')
             return
         }
 
@@ -74,12 +68,18 @@ async function getInfoFromApi() {
     } catch (error) {
         console.error('Something went wrong:', error)
 
-        errorText.innerText = 'Something went wrong. Try again later.'
-        errorText.classList.remove('hidden')
+        displayError('Something went wrong. Try again later.')
+        return
     }
 
     // Show the result section
     result.classList.remove('hidden')
+}
+
+// Function to display an error message
+function displayError(errorMessage) {
+    errorText.innerText = errorMessage
+    errorText.classList.remove('hidden')
 }
 
 // Function to set the character fields with the character information
