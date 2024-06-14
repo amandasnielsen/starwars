@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Star Wars API </title>
+	<script type="module" src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<main>
+		<div class="container">
+			<img class="star-wars-image" src="starwars.jpg">
+			<p>Get information about a character</p>
+			<div>
+				<input type="text" id="search-input" placeholder="Who you lookin' for?">
+			</div>
+			<button id="search-button"> Help me Obi-Wan </button>
+			<div>
+				<p id="error-text" class="hidden"></p>
+				<ul class="result hidden">
+					<li>Name: <span id="character-name"></span></li>
+					<li>Height: <span id="character-height"> cm</span></li>
+					<li>Weight: <span id="character-mass"> kg</span></li>
+					<li>Haircolor: <span id="character-hair_color"></span></li>
+					<li>Skincolor: <span id="character-skin_color"></span></li>
+					<li>Eyecolor: <span id="character-eye_color"></span></li>
+					<li>Birthyear: <span id="character-birth_year"></span></li>
+					<li>Gender: <span id="character-gender"></span></li>
+				</ul>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: rgb(200, 200, 200);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    width: 500px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.star-wars-image {
+    height: 200px;
+    width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search-input {
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#search-button {
+    border-radius: 20px;
+    height: 30px;
+    width: 200px;
+    background-color: rgb(226, 193, 61);
+    border: 1px solid black;
+    margin-top: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#search-button:hover {
+    cursor: pointer;
+}
+
+#search-button:active {
+    height: 28px;
+    width: 190px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.text-about {
+    margin-top: 40px;
+}
+
+.result {
+    margin-top: 10px;
+}
+
+.result {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    float: left;
+}
+
+.result li {
+    text-align: left;
+    width: 100%; 
+    max-width: 200px;
+}
+
+.hidden {
+    display: none;
+}
