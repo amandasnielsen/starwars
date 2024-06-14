@@ -15,12 +15,27 @@
 		<div class="container">
 			<img class="star-wars-image" src="starwars.jpg">
 			<p>Get information about a character</p>
+
+			<!-- Added a div instead of br to break the line between the input and the button -->
 			<div>
 				<input type="text" id="search-input" placeholder="Who you lookin' for?">
 			</div>
+			
 			<button id="search-button"> Help me Obi-Wan </button>
+
 			<div>
+				<!--
+					A hidden field for error texts. Will be populated with data
+					if an error occurs, and will reset before each search
+				-->
 				<p id="error-text" class="hidden"></p>
+
+				<!--
+					A hidden field for the search result. Will be populated with data
+					if a search is successful, and will reset before each search
+
+					Each list item will be populated with data from the API with an individual id
+				-->
 				<ul class="result hidden">
 					<li>Name: <span id="character-name"></span></li>
 					<li>Height: <span id="character-height"> cm</span></li>
